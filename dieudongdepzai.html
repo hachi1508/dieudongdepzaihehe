@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>dieudongdepzai.vn 💗</title>
+<style>
+:root{--pink:#f8dce9;--blue:#dceeff;--ink:#5e5268;--deep:#9b7192}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:"Segoe UI",Arial,sans-serif;color:var(--ink);background:linear-gradient(125deg,#fce7ef 0%,#e8e8fb 48%,#dcefff 100%);overflow-x:hidden}
+body:before,body:after{content:"";position:fixed;width:42vw;height:42vw;border-radius:50%;filter:blur(65px);opacity:.55;z-index:-1;pointer-events:none}
+body:before{background:#ffcfe2;top:-15vw;left:-12vw}body:after{background:#c5e4ff;right:-12vw;bottom:-18vw}
+.page{min-height:100vh;padding:28px 18px;display:none;align-items:center;justify-content:center;position:relative}
+.page.active{display:flex}
+.site{position:absolute;top:22px;left:0;right:0;text-align:center;font-weight:800;letter-spacing:1.5px;color:#9d7b9a;font-size:clamp(15px,3vw,20px)}
+.home-card{width:min(680px,94vw);text-align:center;padding:70px 24px 55px;border:1px solid #ffffffa8;border-radius:32px;background:#ffffff65;box-shadow:0 18px 60px #9a91b326;backdrop-filter:blur(12px);position:relative}
+h1{font-size:clamp(30px,6vw,49px);margin:12px 0;color:#a87599}
+.subtitle{font-size:17px;line-height:1.7;margin:0 auto 30px;max-width:480px}
+.hint{border:1px solid #fff;background:linear-gradient(110deg,#f9dce9,#dceeff);padding:17px 30px;border-radius:999px;color:#866783;font-size:18px;font-weight:750;cursor:pointer;box-shadow:0 8px 24px #b6a3c044;transition:.25s}
+.hint:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 12px 28px #b6a3c066}
+.heart{position:absolute;font-size:clamp(22px,4vw,40px);opacity:.8;animation:float 4s ease-in-out infinite}
+.heart:nth-child(1){top:10%;left:12%;color:#f2a9c7}.heart:nth-child(2){top:18%;right:13%;color:#9bcdf2;animation-delay:.8s}.heart:nth-child(3){bottom:15%;left:16%;color:#a9d7f6;animation-delay:1.3s}.heart:nth-child(4){bottom:12%;right:15%;color:#f3b6d0;animation-delay:.5s}.heart:nth-child(5){top:48%;left:5%;color:#f2b4d0;animation-delay:1.8s}.heart:nth-child(6){top:53%;right:5%;color:#a8d3f2;animation-delay:1s}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-14px) rotate(8deg)}}
+.back{position:absolute;top:72px;left:22px;border:0;background:#ffffff80;color:#876b8a;padding:10px 16px;border-radius:20px;cursor:pointer;font-weight:650}
+.letters-wrap{width:min(920px,100%);padding:95px 8px 35px;text-align:center}
+.letters-wrap h2{font-size:clamp(27px,5vw,40px);color:#a87599;margin:0 0 8px}
+.letters-wrap p{margin:0 0 28px;color:#756b80}
+.letters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.envelope{min-height:150px;border:1px solid #ffffffc9;border-radius:20px;background:linear-gradient(145deg,#fff9fcdd,#eaf5ffdd);box-shadow:0 10px 28px #9a91b326;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;cursor:pointer;color:#8b6d8c;transition:.2s;padding:18px}
+.envelope:hover{transform:translateY(-5px);box-shadow:0 15px 30px #9a91b344}
+.envelope .icon{font-size:36px}.envelope strong{font-size:17px}
+.note{font-size:12px;color:#9a8da0}
+.modal{position:fixed;inset:0;background:#51485d70;display:none;align-items:center;justify-content:center;padding:20px;z-index:5}
+.modal.show{display:flex}
+.letter-paper{width:min(520px,100%);background:linear-gradient(145deg,#fffafd,#f1f8ff);border:1px solid white;border-radius:25px;padding:34px 28px;box-shadow:0 25px 70px #40334b55;position:relative;text-align:center}
+.letter-paper .big-heart{font-size:36px}.letter-paper h3{color:#a87599;font-size:25px;margin:10px 0 16px}
+.letter-paper p{font-size:17px;line-height:1.8;white-space:pre-line;margin:0 0 24px}
+.close{border:0;border-radius:20px;padding:11px 24px;background:linear-gradient(100deg,#f6d7e6,#d9ebfb);color:#795f7b;font-weight:700;cursor:pointer}
+.footer{margin-top:25px;font-size:13px;color:#98879e}
+@media(max-width:620px){.letters{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.envelope{min-height:130px}.back{top:68px;left:12px}.letters-wrap{padding-top:112px}}
+@media(max-width:360px){.letters{grid-template-columns:1fr 1fr}.envelope{padding:12px}}
+</style>
+</head>
+<body>
+<section class="page active" id="home">
+  <div class="site">dieudongdepzai.vn</div>
+  <div class="home-card">
+    <span class="heart">♥</span><span class="heart">♥</span><span class="heart">♥</span>
+    <span class="heart">♥</span><span class="heart">♥</span><span class="heart">♥</span>
+    <div style="font-size:42px">💗 💙</div>
+    <h1>Happy International Men's Day!</h1>
+    <p class="subtitle">Một chút màu hồng, một chút màu xanh và rất nhiều điều muốn gửi đến cậu.<br>Chúc cậu có một ngày 19/11 thật vui nhé!</p>
+    <button class="hint" onclick="showPage('letters')">💌 Điều bất ngờ</button>
+  </div>
+</section>
+
+<section class="page" id="letters">
+  <div class="site">dieudongdepzai.vn</div>
+  <button class="back" onclick="showPage('home')">← Quay lại</button>
+  <div class="letters-wrap">
+    <h2>Gửi cậu 9 chiếc thư 💌</h2>
+    <p>Chọn từng lá thư để mở nhé. Có vài điều mình muốn nói với cậu...</p>
+    <div class="letters" id="letterGrid"></div>
+    <div class="footer">Made with ♡ just for you</div>
+  </div>
+</section>
+
+<div class="modal" id="modal" onclick="closeOutside(event)">
+  <div class="letter-paper">
+    <div class="big-heart">💌</div>
+    <h3 id="modalTitle"></h3>
+    <p id="modalText"></p>
+    <button class="close" onclick="closeLetter()">Đóng thư ♡</button>
+  </div>
+</div>
+<script>
+const messages = [
+"Là chàng trai Ma Kết mang sự thực tế, không viễn vông, trầm tĩnh nhưng ấm áp và rất đáng tin cậy.",
+"Ấn tượng đầu về ngoại hình là chiếc mũi siêu cao và đôi mắt rất tình nhưng cũng đầy sự nuông chiều, che chở.",
+"Dáng vẻ của cậu khi đi làm thì có sự trưởng thành, đầy trách nhiệm. Khác hoàn toàn với dáng vẻ đi chơi: lúc ấy cậu lại rất năng động, cuốn hút, đầy bản lĩnh, pha chút nổi loạn và ngông của tuổi trẻ. Cái khí phách thời niên thiếu ấy không thể bắt chước được.",
+"Ngoài lạnh trong ấm :>.",
+"Khen nhiều rồi đấy, để ý mình một tí. Giờ phải chê mới được: lúc seen không rep :(, lúc thì hơi tiêu cực, chắc do cái áp lực của tuổi 18 này đè lên. Không sao, lại em ôm <3.",
+"Thích đi chơi, thích tụ họp với ae cốt thép, thích một mình nhưng đôi khi lại thích có người tâm sự, thích tự làm ra tiền, thích xe... nhưng chỉ mình là ảnh không thích :(",
+"Thật sự đến giờ vẫn chưa biết con tướng này sợ gì? Chắc sợ mình gọi chồng hihi =).",
+"Ờm thì chúc cậu ngày 19/11 vui vẻ, bình an, 8386, yêu bản thân nhiều hơn, luôn tích cực, iu đời, ngày càng trưởng thành hơn và mong cho mọi cố gắng của cậu sẽ đổi lại bằng những điều xứng đáng, ngọt ngào nhaa!",
+"Còn rất nhiều cái muốn chúc nhưng dài quá thôi thì chúc cậu tất cả trừ vất vả nhée <3"
+];
+const grid=document.getElementById('letterGrid');
+messages.forEach((msg,i)=>{
+ const b=document.createElement('button'); b.className='envelope';
+ b.innerHTML=`<span class="icon">${i===8?'💝':'💌'}</span><strong>Lá thư ${i+1}</strong><span class="note">Bấm để mở thư</span>`;
+ b.addEventListener('click',()=>openLetter(i)); grid.appendChild(b);
+});
+function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0)}
+function openLetter(i){document.getElementById('modalTitle').textContent=`Lá thư ${i+1}`;document.getElementById('modalText').textContent=messages[i];document.getElementById('modal').classList.add('show')}
+function closeLetter(){document.getElementById('modal').classList.remove('show')}
+function closeOutside(e){if(e.target.id==='modal')closeLetter()}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLetter()});
+</script>
+</body>
+</html>
